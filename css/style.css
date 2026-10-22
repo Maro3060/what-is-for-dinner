@@ -1,0 +1,73 @@
+:root {
+  --accent: #000000;
+  --accent-rgp: rgb(0, 0, 0);
+  --surface: #ffffff;
+  --surface-rgp: rgb(255, 255, 255);
+  --text: #101828;
+  --text-rgp: rgb(16, 24, 40);
+  --muted: #6b6b6b;
+  --muted-rgp: rgb(107, 107, 107);
+  --bg-color: #fefbea;
+  --bg-color-rgp: rgb(254, 251, 234);
+  --level-cat-bg-color: #dbfce7;
+  --level-cat-bg-color-rgp: rgb(219, 252, 231);
+  --type-cat-bg-color: #dbeafe;
+  --type-cat-bg-color-rgp: rgb(219, 234, 254);
+  --profile-rounded-color: #ffb86a;
+  --profile-rounded-color-rgp: rgb(255, 184, 106);
+  --card-radius: 0.75rem;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+}
+
+/* start Nav bar */
+.logo .logo-img {
+  background: linear-gradient(to bottom, #ff7715 0%, #ff3b00 100%);
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.logo .logo-data h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.logo .logo-data p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #6a7282;
+}
+
+.profile-img {
+  width: 40px;
+}
+
+.profile-img img {
+  border: solid 2px var(--profile-rounded-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link {
+  color: #4a5565;
+  transition: color 0.15s ease-in;
+}
+
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-link.show:hover,
+.nav-link:hover {
+  color: #f54900;
+}
+
+.collapse hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: #d2964e solid 1px;
+    opacity: .25;
+}
+/* end Nav bar */
