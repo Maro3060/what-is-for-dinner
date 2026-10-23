@@ -23,6 +23,9 @@ body {
   background-color: var(--bg-color);
 }
 
+w-80 {
+  width: 80%;
+}
 /* start Nav bar */
 .logo .logo-img {
   background: linear-gradient(to bottom, #ff7715 0%, #ff3b00 100%);
@@ -123,4 +126,62 @@ section#recipes .recipe-img img {
 .recipe-fuctions .share:hover {
   background-color: #ffd6a7;
 }
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: transparent;
+  border-bottom: solid 2px #f54900;
+  color: #e55c00;
+  transition: all;
+}
+
+.nav-pills .nav-link.active:hover,
+.nav-pills .show > .nav-link:hover {
+  color: #e55c00;
+}
+
+.info-tabs .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6a7282;
+  transition: all 0.15s ease-in;
+}
+
+.info-tabs .nav-link:hover {
+  color: #364153;
+}
+
+.recipe-img {
+  min-height: 250px;
+}
+
+.recipe-img img {
+  object-position: center;
+  object-fit: cover;
+  transform: scale(1.7);
+}
+
+.rate {
+  background-color: #ffffff;
+  top: 20px;
+  left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.rate span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6a7282;
+}
+
+.rate .fa-star {
+  color:#FDC700
+}
+
+
 /* end Recipe Section */

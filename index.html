@@ -104,17 +104,43 @@
     <!-- ====================== start recipe section ====================== -->
     <section id="recipes">
       <div class="container">
-        <div class="card my-5">
+        <div class="card my-5 overflow-hidden">
           <div class="row g-0">
-            <div class="recipe-img col-md-4">
+            <div class="recipe-img col-md-5 overflow-hidden position-relative">
+              <div
+                class="rate position-absolute z-2 rounded-pill py-2 px-3 d-flex align-items-center justify-content-center column-gap-2"
+              >
+                <i class="fa-solid fa-star"></i>
+                4.6
+                <span>(289 reviews)</span>
+              </div>
+              <div
+                class="recipe-details z-2 position-absolute bottom-0 start-0 end-0 mx-3 bg-white mb-3 d-flex justify-content-around column-gap-2 column-gap-lg-4 p-2 p-lg-4 rounded-4"
+              >
+                <div class="time d-flex flex-column row-gap-1 align-items-center fs-6">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Prep Time</span>
+                  <span>20 min</span>
+                </div>
+                <div class="cook-time d-flex flex-column row-gap-1 align-items-center fs-6">
+                  <i class="fa-solid fa-fire-burner"></i>
+                  <span>Cook Time</span>
+                  <span>30 min </span>
+                </div>
+                <div class="surving d-flex flex-column row-gap-1 align-items-center fs-6">
+                  <i class="fa-solid fa-users"></i>
+                  <span>Servings</span>
+                  <span>4 people</span>
+                </div>
+              </div>
               <img
                 src="images/photo-1585032226651-759b368d7246.jpeg"
-                class="img-fluid object-fit-cover"
                 alt="recipe image"
+                class="img-fluid w-100 h-100"
               />
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
+            <div class="col-md-7">
+              <div class="card-body mx-3 my-4">
                 <div
                   class="recipe-data d-flex justify-content-between align-items-center"
                 >
@@ -145,12 +171,109 @@
                     </div>
                   </div>
                 </div>
-
-                <p class="card-text">
-                  <small class="text-body-secondary"
-                    >Last updated 3 mins ago</small
-                  >
-                </p>
+                <div class="info-tabs">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item mx-2" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-home"
+                        aria-selected="true"
+                      >
+                        <i class="fa-solid fa-list-check"></i>
+                        Ingredients
+                      </button>
+                    </li>
+                    <li class="nav-item mx-3" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-profile"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-book-open"></i>
+                        Instructions
+                      </button>
+                    </li>
+                    <li class="nav-item mx-3" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-contact-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-contact"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Nutrition
+                      </button>
+                    </li>
+                    <li class="nav-item mx-3" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-contact-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-contact"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-contact"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Chef's Tips
+                      </button>
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane show active"
+                      id="pills-home"
+                      role="tabpanel"
+                      aria-labelledby="pills-home-tab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                    <div
+                      class="tab-pane"
+                      id="pills-profile"
+                      role="tabpanel"
+                      aria-labelledby="pills-profile-tab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                    <div
+                      class="tab-pane"
+                      id="pills-contact"
+                      role="tabpanel"
+                      aria-labelledby="pills-contact-tab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                    <div
+                      class="tab-pane"
+                      id="pills-disabled"
+                      role="tabpanel"
+                      aria-labelledby="pills-disabled-tab"
+                      tabindex="0"
+                    >
+                      ...
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
