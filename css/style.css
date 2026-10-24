@@ -288,4 +288,13 @@ section#recipes .recipe-img img {
   font-size: 20px;
   font-weight: 700;
 }
+
+.chef-tip-box {
+  background-color: #FFFBEB;
+  border-left: #FFB900 solid 4px;
+}
+
+.chef-tip-box .fa-circle-check {
+  color: #E17100;
+}
 /* end Recipe Section */
