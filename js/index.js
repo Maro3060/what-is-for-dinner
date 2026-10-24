@@ -300,33 +300,28 @@ function getRecipe() {
     
     for(var i = 0; i < recipes[random].ingredients.length; i++) {
         blackBox += `
-        <div
-                          class="ingreddients-step d-flex column-gap-2" 
-                        >
-                          <div
-                            class="step-number text-white rounded-circle d-flex justify-content-center align-items-center"
-                            
-                          >
-                            ${i+1}
-                          </div>
-                          ${recipes[random].ingredients[i]}
-                        </div>
+        <div class="ingreddients-step d-flex align-items-start column-gap-2">
+  <div
+    class="step-number text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+  >
+    ${i+1}
+  </div>
+  <span>${recipes[random].ingredients[i]}</span>
+</div>
         `;
     }
     ingredients.innerHTML = blackBox;
 
     for(var i = 0; i < recipes[random].instructions.length; i++) {
         blackBox2 += `
-        <div class="instruction-step d-flex align-items-center column-gap-2">
-                          <div
-                            class="instruction-num text-white d-flex align-items-center justify-content-center rounded-4"
-                          >
-                            ${i+1}
-                          </div>
-                          <span
-                            >${recipes[random].instructions[i]}</span
-                          >
-                        </div>
+        <div class="instruction-step d-flex align-items-start column-gap-2">
+  <div
+    class="instruction-num text-white d-flex align-items-center justify-content-center rounded-4 flex-shrink-0"
+  >
+    ${i+1}
+  </div>
+  <span>${recipes[random].instructions[i]}</span>
+</div>
         ` ;
     }
     instructions.innerHTML = blackBox2 
@@ -401,7 +396,7 @@ function getRecipe() {
         </div>
         <span class="fw-medium">Sodium</span>
       </div>
-      <div class="nutration-data text-nowrap"><span>380 kcal</span></div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.Sodium}</span></div>
     </div>
   </div>
 </div>
