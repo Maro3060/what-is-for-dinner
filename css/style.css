@@ -290,16 +290,22 @@ section#recipes .recipe-img img {
 }
 
 .chef-tip-box {
-  background-color: #FFFBEB;
-  border-left: #FFB900 solid 4px;
+  background-color: #fffbeb;
+  border-left: #ffb900 solid 4px;
 }
 
 .chef-tip-box .fa-circle-check {
-  color: #E17100;
+  color: #e17100;
 }
 
 .try {
   font-weight: 600;
   background: linear-gradient(to right, #ff6a00, #ff2d2d);
+}
+
+.extended {
+  background-color: #fef2f2;
+  border-left: solid 5px #fb2c36;
+  border-radius: 0.625rem;
 }
 /* end Recipe Section */

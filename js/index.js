@@ -232,6 +232,7 @@ var ingredients = document.getElementById("ingreddients-element");
 var instructions = document.getElementById("instruction");
 var nutrations = document.getElementById("nutrition")
 var tip = document.getElementById("tips");
+var warning = document.getElementById("warning-message")
 
 function getRecipe() {
     var random = Math.floor(Math.random() * recipes.length);
@@ -444,6 +445,29 @@ function getRecipe() {
         `;
     }
     tip.innerHTML = blackBox3
+
+    if(recipes[random].warning == true) {
+        warning.innerHTML = `
+        <div class="extended">
+                    <div class="warninig d-flex align-items-center column-gap-2 p-3">
+                      <div class="warning-icon text-danger">
+                        <i class="fa-solid fa-triangle-exclamation fs-4"></i>
+                      </div>
+                      <div class="warning-data">
+                        <h2 class="text-danger fs-6 m-0 fw-bold">
+                          Extended Preparation Time
+                        </h2>
+                        <p class="m-0 text-danger">
+                          This recipe requires more than 45 minutes to prepare.
+                          Plan accordingly!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+        `;
+    } else {
+        warning.innerHTML = "";
+    }
 }
 
 getRecipe();
