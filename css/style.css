@@ -210,4 +210,26 @@ section#recipes .recipe-img img {
   font-size: 16px;
   font-weight: 700;
 }
+
+.ingreddients-box {
+  background-color: #FFF9EC;
+  font-size: 1rem;
+
+}
+
+.step-number {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #FF6900;
+} 
+
+.instruction-num {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #FF6900;
+}
 /* end Recipe Section */
