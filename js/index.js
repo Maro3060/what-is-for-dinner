@@ -157,7 +157,7 @@ var recipes = [
             "Fresh cilantro for garnish"
         ],
         instructions: [
-            "Heat wok over high heat with oil. Cook chicken uHeat oil in a large pan, cook marinated chicken until browned. Remove and set aside.ntil golden, remove and set aside.",
+            "Heat oil in a large pan, cook marinated chicken until browned. Remove and set aside.",
             "In the same pan, sauté onion until soft. Add garlic and ginger, cook for 1 minute.",
             "Add remaining tikka paste and canned tomatoes. Simmer for 10 minutes.",
             "Stir in coconut cream and remaining yogurt. Add chicken back to the pan.",
@@ -226,3 +226,224 @@ var recipes = [
         warning: false
     },
 ];
+var cardHead = document.getElementById("card-header");
+var imgPart = document.getElementById("left-side");
+var ingredients = document.getElementById("ingreddients-element");
+var instructions = document.getElementById("instruction");
+var nutrations = document.getElementById("nutrition")
+var tip = document.getElementById("tips");
+
+function getRecipe() {
+    var random = Math.floor(Math.random() * recipes.length);
+    var blackBox = "";
+    var blackBox2 = "";
+    var blackBox3 = "";
+    cardHead.innerHTML = `
+    <div class="category d-flex column-gap-2">
+                      <div
+                        class="level px-3 rounded-5 d-flex align-items-center"
+                      >
+                        <span>${recipes[random].level}</span>
+                      </div>
+                      <div
+                        class="type px-3 py-1 rounded-5 d-flex align-items-center"
+                      >
+                        <span>${recipes[random].type}</span>
+                      </div>
+                    </div>
+                    <div class="recipe-name">
+                      <h2>${recipes[random].recipeName}</h2>
+                      <p>${recipes[random].recipeDesc}</p>
+                    </div>
+    `;
+
+    imgPart.innerHTML = `
+    <div
+                class="rate position-absolute z-2 rounded-pill py-2 px-3 d-flex align-items-center justify-content-center column-gap-2"
+              >
+                <i class="fa-solid fa-star"></i>
+                ${recipes[random].rate}
+                <span>(${recipes[random].reviews} reviews)</span>
+              </div>
+              <div
+                class="recipe-details z-2 position-absolute bottom-0 start-0 end-0 mx-3 bg-white mb-3 d-flex justify-content-around column-gap-2 column-gap-lg-4 p-2 p-lg-4 rounded-4"
+              >
+                <div
+                  class="time d-flex flex-column row-gap-1 align-items-center"
+                >
+                  <i class="fa-solid fa-clock fs-4"></i>
+                  <span>Prep Time</span>
+                  <span>${recipes[random].prepTime}</span>
+                </div>
+                <div
+                  class="cook-time d-flex flex-column row-gap-1 align-items-center"
+                >
+                  <i class="fa-solid fa-fire-burner fs-4"></i>
+                  <span>Cook Time</span>
+                  <span>${recipes[random].cookTime}</span>
+                </div>
+                <div
+                  class="surving d-flex flex-column row-gap-1 align-items-center"
+                >
+                  <i class="fa-solid fa-users fs-4"></i>
+                  <span>Servings</span>
+                  <span>${recipes[random].servings}</span>
+                </div>
+              </div>
+              <img
+                src="${recipes[random].image}"
+                alt="recipe image"
+                class="img-fluid w-100 h-100"
+              />
+    `;
+    
+    for(var i = 0; i < recipes[random].ingredients.length; i++) {
+        blackBox += `
+        <div
+                          class="ingreddients-step d-flex column-gap-2" 
+                        >
+                          <div
+                            class="step-number text-white rounded-circle d-flex justify-content-center align-items-center"
+                            
+                          >
+                            ${i+1}
+                          </div>
+                          ${recipes[random].ingredients[i]}
+                        </div>
+        `;
+    }
+    ingredients.innerHTML = blackBox;
+
+    for(var i = 0; i < recipes[random].instructions.length; i++) {
+        blackBox2 += `
+        <div class="instruction-step d-flex align-items-center column-gap-2">
+                          <div
+                            class="instruction-num text-white d-flex align-items-center justify-content-center rounded-4"
+                          >
+                            ${i+1}
+                          </div>
+                          <span
+                            >${recipes[random].instructions[i]}</span
+                          >
+                        </div>
+        ` ;
+    }
+    instructions.innerHTML = blackBox2 
+    
+    nutrations.innerHTML = `
+    <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <span class="fw-medium">Calorie</span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>${recipes[random].nutrations.calories}</span>
+                          </div>
+                        </div>
+                        <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon protine-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <span class="fw-medium">Protein </span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>${recipes[random].nutrations.protein}</span>
+                          </div>
+                        </div>
+                        <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon carbohydrates-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-wheat-awn"></i>
+                            </div>
+                            <span class="fw-medium">Carbohydrates</span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>${recipes[random].nutrations.carbohydrates}</span>
+                          </div>
+                        </div>
+                        <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon fat-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <span class="fw-medium">Fat</span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>${recipes[random].nutrations.fat}</span>
+                          </div>
+                        </div>
+                        <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon fiber-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <span class="fw-medium">Fiber</span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>${recipes[random].nutrations.fiber}</span>
+                          </div>
+                        </div>
+                        <div
+                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
+                        >
+                          <div
+                            class="nutration-info d-flex align-items-center column-gap-2"
+                          >
+                            <div
+                              class="nutration-icon sodium-icon d-flex align-items-center justify-content-center rounded-3"
+                            >
+                              <i class="fa-solid fa-cube"></i>
+                            </div>
+                            <span class="fw-medium">Sodium</span>
+                          </div>
+                          <div class="nutration-data">
+                            <span>380 kcal</span>
+                          </div>
+                        </div>
+    `;
+
+    for(var i = 0; i < recipes[random].tips.length; i++) {
+        blackBox3 += `
+        <div class="chef-tip-box p-4 rounded-4">
+                          <i class="fa-solid fa-circle-check"></i>
+                          ${recipes[random].tips[i]}
+                        </div>
+        `;
+    }
+    tip.innerHTML = blackBox3
+}
+
+getRecipe();

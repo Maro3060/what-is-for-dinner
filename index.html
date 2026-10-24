@@ -106,68 +106,19 @@
       <div class="container vh-100 mb-5">
         <div class="card my-5 mb-3 h-100 overflow-y-scroll shadow-lg">
           <div class="row g-0 h-100">
-            <div class="recipe-img col-md-5 overflow-hidden position-relative">
-              <div
-                class="rate position-absolute z-2 rounded-pill py-2 px-3 d-flex align-items-center justify-content-center column-gap-2"
-              >
-                <i class="fa-solid fa-star"></i>
-                4.6
-                <span>(289 reviews)</span>
-              </div>
-              <div
-                class="recipe-details z-2 position-absolute bottom-0 start-0 end-0 mx-3 bg-white mb-3 d-flex justify-content-around column-gap-2 column-gap-lg-4 p-2 p-lg-4 rounded-4"
-              >
-                <div
-                  class="time d-flex flex-column row-gap-1 align-items-center"
-                >
-                  <i class="fa-solid fa-clock fs-4"></i>
-                  <span>Prep Time</span>
-                  <span>20 min</span>
-                </div>
-                <div
-                  class="cook-time d-flex flex-column row-gap-1 align-items-center"
-                >
-                  <i class="fa-solid fa-fire-burner fs-4"></i>
-                  <span>Cook Time</span>
-                  <span>30 min </span>
-                </div>
-                <div
-                  class="surving d-flex flex-column row-gap-1 align-items-center"
-                >
-                  <i class="fa-solid fa-users fs-4"></i>
-                  <span>Servings</span>
-                  <span>4 people</span>
-                </div>
-              </div>
-              <img
-                src="images/photo-1585032226651-759b368d7246.jpeg"
-                alt="recipe image"
-                class="img-fluid w-100 h-100"
-              />
-            </div>
+            <div
+              class="recipe-img col-md-5 overflow-hidden position-relative"
+              id="left-side"
+            ></div>
             <div class="col-md-7">
               <div class="card-body mx-3 my-4">
                 <div
                   class="recipe-data d-flex justify-content-between align-items-center"
                 >
-                  <div class="card-head d-flex flex-column row-gap-2">
-                    <div class="category d-flex column-gap-2">
-                      <div
-                        class="level px-3 rounded-5 d-flex align-items-center"
-                      >
-                        <span>Easy</span>
-                      </div>
-                      <div
-                        class="type px-3 py-1 rounded-5 d-flex align-items-center"
-                      >
-                        <span>Asian</span>
-                      </div>
-                    </div>
-                    <div class="recipe-name">
-                      <h2>Vegetable Curry</h2>
-                      <p>Hearty vegetarian curry with coconut milk</p>
-                    </div>
-                  </div>
+                  <div
+                    class="card-head d-flex flex-column row-gap-2"
+                    id="card-header"
+                  ></div>
                   <div class="recipe-fuctions d-flex fs-5 column-gap-3 me-4">
                     <div class="save p-3 rounded-4 d-flex align-items-center">
                       <i class="fa-solid fa-bookmark"></i>
@@ -254,19 +205,9 @@
                       tabindex="0"
                     >
                       <div
-                        class="ingreddients-box h-auto w-100 p-3 rounded-4 d-flex flex-column row-gap-2"
-                      >
-                        <div
-                          class="ingreddients-step d-flex column-gap-2 align-items-center"
-                        >
-                          <div
-                            class="step-number text-white rounded-circle d-flex justify-content-center align-items-center"
-                          >
-                            1
-                          </div>
-                          1 large romaine lettuce
-                        </div>
-                      </div>
+                        class="ingreddients-box h-auto w-100 p-3 rounded-4 d-flex flex-column row-gap-3"
+                        id="ingreddients-element"
+                      ></div>
                     </div>
                     <div
                       class="tab-pane"
@@ -277,21 +218,8 @@
                     >
                       <div
                         class="Instructions-box d-flex flex-column row-gap-2"
-                      >
-                        <div
-                          class="instruction-step d-flex align-items-center column-gap-2"
-                        >
-                          <div
-                            class="instruction-num text-white d-flex align-items-center justify-content-center rounded-4"
-                          >
-                            1
-                          </div>
-                          <span
-                            >Wash and dry romaine lettuce thoroughly. Tear into
-                            bite-sized pieces.</span
-                          >
-                        </div>
-                      </div>
+                        id="instruction"
+                      ></div>
                     </div>
                     <div
                       class="tab-pane"
@@ -302,110 +230,8 @@
                     >
                       <div
                         class="nutration-data d-flex flex-row flex-wrap column-gap-4 row-gap-3"
-                      >
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-fire"></i>
-                            </div>
-                            <span class="fw-medium">Calorie</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon protine-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-dumbbell"></i>
-                            </div>
-                            <span class="fw-medium">Protein </span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon carbohydrates-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-wheat-awn"></i>
-                            </div>
-                            <span class="fw-medium">Carbohydrates</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon fat-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-droplet"></i>
-                            </div>
-                            <span class="fw-medium">Fat</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon fiber-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-seedling"></i>
-                            </div>
-                            <span class="fw-medium">Fiber</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon sodium-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-cube"></i>
-                            </div>
-                            <span class="fw-medium">Sodium</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
-                      </div>
+                        id="nutrition"
+                      ></div>
                     </div>
                     <div
                       class="tab-pane"
@@ -414,17 +240,17 @@
                       aria-labelledby="tips-tab"
                       tabindex="0"
                     >
-                      <div class="chef-tips d-flex flex-column row-gap-3">
-                        <div class="chef-tip-box p-4 rounded-4">
-                          <i class="fa-solid fa-circle-check"></i>
-                          Add vegetables in order of cooking time needed
-                        </div>
+                      <div class="chef-tips d-flex flex-column row-gap-3" id="tips">
+                        
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
-                <button class="btn try text-white px-3 py-2 rounded-3 shadow-lg">
+                <button
+                  class="btn try text-white px-3 py-2 rounded-3 shadow-lg"
+                  onclick="getRecipe()"
+                >
                   <i class="fa-solid fa-rotate"></i>
                   Try Another Recipe
                 </button>
