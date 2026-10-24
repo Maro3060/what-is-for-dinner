@@ -23,8 +23,8 @@ body {
   background-color: var(--bg-color);
 }
 
-w-80 {
-  width: 80%;
+.w-45 {
+  width: 48%;
 }
 /* start Nav bar */
 .logo .logo-img {
@@ -243,15 +243,49 @@ section#recipes .recipe-img img {
   background-color: #f9fafb;
 }
 
-.calories-box .nutration-icon {
-  color: #f54900;
+.nutration-icon {
+  width: 40px;
+  height: 40px;
 }
 
-.nutration-box span:nth-child(2){
+.calories-icon {
+  color: #f54900;
+  background-color: #ffedd4;
+}
+
+.protine-icon {
+  color: #155dfc;
+  background-color: #dbeafe;
+}
+
+.carbohydrates-icon {
+  background-color: #fef9c2;
+  color: #d08700;
+}
+
+.fat-icon {
+  background-color: #ffe2e2;
+  color: #e7000b;
+}
+
+.fiber-icon {
+  background-color: #dbfce7;
+  color: #00a63e;
+}
+
+.sodium-icon {
+  background-color: #fce7f3;
+  color: #e60076;
+}
+
+.nutration-box span:nth-child(2) {
   color: #364153;
   font-weight: 500;
   font-size: 1rem;
 }
 
-
+.nutration-data {
+  font-size: 20px;
+  font-weight: 700;
+}
 /* end Recipe Section */
