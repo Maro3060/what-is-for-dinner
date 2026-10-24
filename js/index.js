@@ -332,108 +332,79 @@ function getRecipe() {
     instructions.innerHTML = blackBox2 
     
     nutrations.innerHTML = `
-    <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-fire"></i>
-                            </div>
-                            <span class="fw-medium">Calorie</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>${recipes[random].nutrations.calories}</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon protine-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-dumbbell"></i>
-                            </div>
-                            <span class="fw-medium">Protein </span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>${recipes[random].nutrations.protein}</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon carbohydrates-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-wheat-awn"></i>
-                            </div>
-                            <span class="fw-medium">Carbohydrates</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>${recipes[random].nutrations.carbohydrates}</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon fat-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-droplet"></i>
-                            </div>
-                            <span class="fw-medium">Fat</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>${recipes[random].nutrations.fat}</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon fiber-icon calories-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-seedling"></i>
-                            </div>
-                            <span class="fw-medium">Fiber</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>${recipes[random].nutrations.fiber}</span>
-                          </div>
-                        </div>
-                        <div
-                          class="nutration-box d-flex align-items-center justify-content-between p-3 rounded-4 w-45"
-                        >
-                          <div
-                            class="nutration-info d-flex align-items-center column-gap-2"
-                          >
-                            <div
-                              class="nutration-icon sodium-icon d-flex align-items-center justify-content-center rounded-3"
-                            >
-                              <i class="fa-solid fa-cube"></i>
-                            </div>
-                            <span class="fw-medium">Sodium</span>
-                          </div>
-                          <div class="nutration-data">
-                            <span>380 kcal</span>
-                          </div>
-                        </div>
+    <div class="row row-cols-1 row-cols-xl-2 g-2">
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon calories-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-fire"></i>
+        </div>
+        <span class="fw-medium">Calorie</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.calories}</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon protine-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span class="fw-medium">Protein</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.protein}</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon carbohydrates-icon calories-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-wheat-awn"></i>
+        </div>
+        <span class="fw-medium">Carbohydrates</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.carbohydrates}</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon fat-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
+        <span class="fw-medium">Fat</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.fat}</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon fiber-icon calories-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <span class="fw-medium">Fiber</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>${recipes[random].nutrations.fiber}</span></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="nutration-box d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-4 h-100">
+      <div class="nutration-info d-flex align-items-center column-gap-2">
+        <div class="nutration-icon sodium-icon d-flex align-items-center justify-content-center rounded-3">
+          <i class="fa-solid fa-cube"></i>
+        </div>
+        <span class="fw-medium">Sodium</span>
+      </div>
+      <div class="nutration-data text-nowrap"><span>380 kcal</span></div>
+    </div>
+  </div>
+</div>
     `;
 
     for(var i = 0; i < recipes[random].tips.length; i++) {

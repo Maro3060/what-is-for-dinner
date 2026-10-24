@@ -301,6 +301,12 @@ section#recipes .recipe-img img {
 .try {
   font-weight: 600;
   background: linear-gradient(to right, #ff6a00, #ff2d2d);
+  transition: all 0.15s ease-in;
+}
+
+.try:hover {
+  background: linear-gradient(135deg, #ff2400 0%, #ff6b00 100%);
+  transform: scale(1.1);
 }
 
 .extended {
