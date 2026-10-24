@@ -297,4 +297,9 @@ section#recipes .recipe-img img {
 .chef-tip-box .fa-circle-check {
   color: #E17100;
 }
+
+.try {
+  font-weight: 600;
+  background: linear-gradient(to right, #ff6a00, #ff2d2d);
+}
 /* end Recipe Section */
