@@ -80,6 +80,7 @@ section#recipes .recipe-img img {
   border-bottom-left-radius: 1.5625rem;
   border-top-left-radius: 1.5625rem;
 }
+
 .level {
   background-color: var(--level-cat-bg-color);
 }
@@ -93,6 +94,7 @@ section#recipes .recipe-img img {
   font-size: 0.75rem;
   font-weight: 600;
 }
+
 .level span {
   color: #008236;
 }
@@ -111,6 +113,11 @@ section#recipes .recipe-img img {
   font-size: 1.125rem;
   font-weight: 400;
   color: #4a5565;
+}
+
+.nav-pills::-webkit-scrollbar,
+.card::-webkit-scrollbar {
+  display: none;
 }
 
 .recipe-fuctions .save,
@@ -162,7 +169,7 @@ section#recipes .recipe-img img {
 .recipe-img img {
   object-position: center;
   object-fit: cover;
-  transform: scale(1.7);
+  transform: scale(1.1);
 }
 
 .rate {
@@ -180,31 +187,31 @@ section#recipes .recipe-img img {
 }
 
 .rate .fa-star {
-  color:#FDC700
+  color: #fdc700;
 }
 
 .recipe-details .time {
-  color: #FF6900;
+  color: #ff6900;
 }
 
 .recipe-details .cook-time {
-  color: #FB2C36;
+  color: #fb2c36;
 }
 
 .recipe-details .surving {
-  color: #2B7FFF;
+  color: #2b7fff;
 }
 
-.recipe-details .time span:nth-child(2) ,
-.recipe-details .cook-time span:nth-child(2) ,
+.recipe-details .time span:nth-child(2),
+.recipe-details .cook-time span:nth-child(2),
 .recipe-details .surving span:nth-child(2) {
   color: #6a7282;
   font-size: 14px;
   font-weight: 400;
 }
 
-.recipe-details .time span:nth-child(3) ,
-.recipe-details .cook-time span:nth-child(3) ,
+.recipe-details .time span:nth-child(3),
+.recipe-details .cook-time span:nth-child(3),
 .recipe-details .surving span:nth-child(3) {
   color: #101828;
   font-size: 16px;
@@ -212,9 +219,8 @@ section#recipes .recipe-img img {
 }
 
 .ingreddients-box {
-  background-color: #FFF9EC;
+  background-color: #fff9ec;
   font-size: 1rem;
-
 }
 
 .step-number {
@@ -222,14 +228,30 @@ section#recipes .recipe-img img {
   height: 1.5rem;
   font-size: 0.75rem;
   font-weight: 700;
-  background-color: #FF6900;
-} 
+  background-color: #ff6900;
+}
 
 .instruction-num {
   width: 48px;
   height: 48px;
   font-size: 20px;
   font-weight: 700;
-  background-color: #FF6900;
+  background-color: #ff6900;
 }
+
+.nutration-box {
+  background-color: #f9fafb;
+}
+
+.calories-box .nutration-icon {
+  color: #f54900;
+}
+
+.nutration-box span:nth-child(2){
+  color: #364153;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
 /* end Recipe Section */

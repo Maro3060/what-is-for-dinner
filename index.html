@@ -103,9 +103,9 @@
     <!-- ====================== end nav bar ====================== -->
     <!-- ====================== start recipe section ====================== -->
     <section id="recipes">
-      <div class="container">
-        <div class="card my-5 overflow-hidden">
-          <div class="row g-0">
+      <div class="container vh-100 mb-5">
+        <div class="card my-5 mb-3 h-100 overflow-y-scroll shadow-lg">
+          <div class="row g-0 h-100">
             <div class="recipe-img col-md-5 overflow-hidden position-relative">
               <div
                 class="rate position-absolute z-2 rounded-pill py-2 px-3 d-flex align-items-center justify-content-center column-gap-2"
@@ -178,7 +178,7 @@
                   </div>
                 </div>
                 <div class="info-tabs">
-                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <ul class="nav nav-pills mb-3 d-flex flex-nowrap overflow-x-scroll" id="pills-tab" role="tablist">
                     <li class="nav-item mx-2" role="presentation">
                       <button
                         class="nav-link active"
@@ -227,12 +227,12 @@
                     <li class="nav-item mx-3" role="presentation">
                       <button
                         class="nav-link"
-                        id="pills-contact-tab"
+                        id="tips-tab"
                         data-bs-toggle="pill"
-                        data-bs-target="#pills-contact"
+                        data-bs-target="#tips-pane"
                         type="button"
                         role="tab"
-                        aria-controls="pills-contact"
+                        aria-controls="tips-pane"
                         aria-selected="false"
                       >
                         <i class="fa-solid fa-lightbulb"></i>
@@ -249,7 +249,9 @@
                       aria-labelledby="pills-home-tab"
                       tabindex="0"
                     >
-                      <div class="ingreddients-box h-auto w-100 p-3 rounded-4 d-flex flex-column row-gap-2">
+                      <div
+                        class="ingreddients-box h-auto w-100 p-3 rounded-4 d-flex flex-column row-gap-2"
+                      >
                         <div
                           class="ingreddients-step d-flex column-gap-2 align-items-center"
                         >
@@ -269,7 +271,9 @@
                       aria-labelledby="pills-profile-tab"
                       tabindex="0"
                     >
-                      <div class="Instructions-box d-flex flex-column row-gap-2">
+                      <div
+                        class="Instructions-box d-flex flex-column row-gap-2"
+                      >
                         <div
                           class="instruction-step d-flex align-items-center column-gap-2"
                         >
@@ -292,13 +296,20 @@
                       aria-labelledby="pills-contact-tab"
                       tabindex="0"
                     >
-                      ...
+                      <div class="nutration-box">
+                        <div class="calories-box d-flex">
+                          <div class="nutration-icon">
+                            <i class="fa-solid fa-fire"></i>
+                          </div>
+                          <span>Calorie</span>
+                        </div>
+                      </div>
                     </div>
                     <div
-                      class="tab-pane"
-                      id="pills-disabled"
+                      class="tab-pane fade"
+                      id="tips-pane"
                       role="tabpanel"
-                      aria-labelledby="pills-disabled-tab"
+                      aria-labelledby="tips-tab"
                       tabindex="0"
                     >
                       ...
